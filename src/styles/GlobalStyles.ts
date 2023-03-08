@@ -9,7 +9,7 @@ export const GlobalStyles = createGlobalStyle`
     list-style: none;
     text-decoration: none;
     
-    font-size: 62,5%;
+    /* font-size: 62.5%; */
     font-family: 'Inter', sans-serif;
     line-height: 150%;
   }
