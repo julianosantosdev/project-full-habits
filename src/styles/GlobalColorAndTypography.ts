@@ -18,37 +18,37 @@ export const GlobalColorAndTypography = createGlobalStyle`
   }
 
   .heading-1{
-    font-size: 4.8rem;
+    font-size: 3rem;
     font-weight: 700;
   }
 
   .heading-2{
-    font-size: 4.0rem;
+    font-size: 2.5rem;
     font-weight: 700;
   }
 
   .heading-3{
-    font-size: 2.8rem;
+    font-size: 1.75rem;
     font-weight: 700;
   }
 
   .heading-4{
-    font-size: 2.0rem;
+    font-size: 1.25rem;
     font-weight: 700;
   }
 
   .text-1{
-    font-size: 1.6rem;
+    font-size: 1rem;
     font-weight: 400;
   }
 
   .text-2{
-    font-size: 1.4rem;
+    font-size: 0.875rem;
     font-weight: 400;
   }
 
   .text-3{
-    font-size: 1.2rem;
+    font-size: 0.75rem;
     font-weight: 400;
   }
 `;
