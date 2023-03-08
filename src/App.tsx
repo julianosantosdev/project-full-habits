@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./App.css";
 import { GlobalStyles } from "./styles/GlobalStyles";
 import { Router } from "./Router";
 import { Toastfy } from "./Toastfy";
