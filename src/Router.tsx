@@ -5,11 +5,10 @@ import { TestPage } from "./pages/teste/TestePage";
 
 export const Router = () => (
   <Routes>
-    <Route path="/" element={<TestPage />} />
+    <Route path="*" element={<TestPage />} />
 
     <Route path="/register" element={<RegisterPage />} />
     <Route path="/" element={<LoginPage />} />
     {/* <Route path="/dashboard" element={} /> */}
   </Routes>
 );
-
