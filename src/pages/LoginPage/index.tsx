@@ -1,36 +1,27 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { StyledMain } from "./style";
 import { useUserContext } from "../../hooks/useUserContext";
+import { StyledMain } from "./style";
 import { Link } from "react-router-dom";
 
 interface IUseForm {
-  name: string;
   email: string;
   password: string;
-  confirmPassword: string;
 }
 
 const schema = yup
   .object({
-    name: yup.string().required("Nome é um campo obrigatório"),
     email: yup
       .string()
       .email("E-mail deve ser um e-mail válido")
       .required("E-mail é um campo obrigatório"),
     password: yup.string().required("Senha é um campo obrigatório"),
-    confirmPassword: yup
-      .string()
-      .oneOf(
-        [yup.ref("password")],
-        "Confirmação de senha deve ser igual a senha"
-      ),
   })
   .required();
 
-export const RegisterPage = () => {
-  const { registerUser } = useUserContext();
+export const LoginPage = () => {
+  const { loginUser } = useUserContext();
 
   const {
     register,
@@ -39,20 +30,14 @@ export const RegisterPage = () => {
   } = useForm<IUseForm>({ resolver: yupResolver(schema) });
 
   const onSubmit: SubmitHandler<IUseForm> = (data) => {
-    registerUser(data);
+    loginUser(data);
   };
 
   return (
     <StyledMain>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <h1 className="heading-2">Cadastre-se</h1>
+        <h1 className="heading-2">Login</h1>
         <div className="form-container">
-          <label className="text-1" htmlFor="nome">
-            Nome
-          </label>
-          <input type="text" id="nome" {...register("name")} />
-          <p>{errors.name?.message}</p>
-
           <label className="text-1" htmlFor="email">
             E-mail
           </label>
@@ -64,21 +49,14 @@ export const RegisterPage = () => {
           </label>
           <input type="password" id="password" {...register("password")} />
           <p>{errors.password?.message}</p>
-
-          <label className="text-1" htmlFor="confirmPassword">
-            Confirme a senha
-          </label>
-          <input
-            type="password"
-            id="confirmPassword"
-            {...register("confirmPassword")}
-          />
-          <p>{errors.confirmPassword?.message}</p>
         </div>
-        <button type="submit">Criar conta</button>
-        <Link className="link-login" to="/">
-          Login
-        </Link>
+        <button type="submit">Entrar</button>
+        <div className="register-container">
+          <p>Não tem conta?</p>
+          <Link className="link-register" to="/register">
+            Cadastre-se
+          </Link>
+        </div>
       </form>
     </StyledMain>
   );

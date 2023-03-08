@@ -12,7 +12,6 @@ export const StyledMain = styled.main`
 
   form {
     border: 1px solid red;
-    background-color: var(--color-gray);
     border-radius: var(--border-default);
     width: 100%;
     max-width: 750px;
@@ -38,10 +37,23 @@ export const StyledMain = styled.main`
       margin: 20px;
     }
 
-    .link-login {
-      border: solid red 1px;
-      text-align: center;
-      margin: 20px;
+    .register-container {
+      width: 100%;
+      padding: 5px 20px;
+      margin-bottom: 20px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      p {
+        text-align: center;
+      }
+
+      .link-register {
+        border: 1px solid;
+        text-align: center;
+      }
     }
   }
 `;
