@@ -10,7 +10,7 @@ export const GlobalColorAndTypography = createGlobalStyle`
     --color-blue-3: #01308D;
     --color-white: #F1F3F5;
     --color-black: #212529;
-    --color-gray: ##D9D9D9;
+    --color-gray: #D9D9D9;
     --color-sucess: #188A94;
     --color-warn: #D2B77A;
     --color-error: #E02D2D;
