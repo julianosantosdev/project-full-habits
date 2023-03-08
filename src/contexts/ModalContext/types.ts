@@ -2,11 +2,15 @@ interface iModalContextProps {
   children: React.ReactNode;
 }
 
-interface iModalContext {
-  setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
-  showModal: boolean;
-  handleCloseModal: () => void
+interface iModalType {
+  type: string;
 }
 
-export type { iModalContextProps, iModalContext };
+interface iModalContext {
+  setShowModal: React.Dispatch<React.SetStateAction<null>>;
+  showModal: null;
+  handleCloseModal: () => void;
+}
+
+export type { iModalContextProps, iModalType, iModalContext };
 

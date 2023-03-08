@@ -10,7 +10,7 @@ export const GlobalStyles = createGlobalStyle`
     text-decoration: none;
     
     /* font-size: 62.5%; */
-    font-family: 'Inter', sans-serif;
+    font-family: 'Nunito', sans-serif;
     line-height: 150%;
   }
 

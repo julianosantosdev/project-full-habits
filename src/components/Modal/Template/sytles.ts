@@ -17,10 +17,11 @@ const ModalContainer = styled.section`
     min-height: 16rem;
     width: 90%;
     background-color: var(--color-gray);
-    border-radius: 8px;
+    border-radius: var(--border-default);
   }
 
   .modalHeader {
+    height: 3rem;
     background-color: var(--color-secundary);
     display: flex;
     flex-direction: row;

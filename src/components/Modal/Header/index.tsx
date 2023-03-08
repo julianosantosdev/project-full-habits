@@ -1,11 +1,15 @@
 import { useContext } from 'react';
 import { ModalContext } from '../../../contexts/ModalContext/ModalContext';
 
-const ModalHeader = () => {
+interface iModalTitle {
+  title: string
+}
+
+const ModalHeader = ({title}: iModalTitle) => {
   const { handleCloseModal } = useContext(ModalContext);
   return (
     <div className='modalHeader'>
-      <h3 className='heading-3'>Registar Sono</h3>
+      <h3 className='heading-3'>{title}</h3>
       <button
         onClick={() => {
           handleCloseModal();
