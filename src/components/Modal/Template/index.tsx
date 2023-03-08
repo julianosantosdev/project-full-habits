@@ -1,14 +1,21 @@
+import { ModalHeader } from '../ModalHeader';
+import { ModalContainer } from './sytles';
+
 const ModalTemplate = () => {
   console.log('oi');
   return (
-    <section>
+    <ModalContainer>
       <div className='modalBody'>
-        <div>
-          <p>título modal header</p>
-          <button type='button'>X</button>
+        <ModalHeader />
+        <div className='modalContent'>
+          <form>
+            <input type='text' />
+            <input type='text' />
+            <button>Adicionar</button>
+          </form>
         </div>
       </div>
-    </section>
+    </ModalContainer>
   );
 };
 
