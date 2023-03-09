@@ -1,23 +1,20 @@
 import { useContext } from 'react';
 import { ModalTemplate } from '../../components/Modal/Template';
 import { ModalContext } from '../../contexts/ModalContext/ModalContext';
-import { iModalType } from '../../contexts/ModalContext/types';
 
 const TestPage = () => {
-  const { showModal, setShowModal } = useContext(ModalContext);
+  const { showModal, setShowModal, handleShowModal } = useContext(ModalContext);
 
-  const handleModal = (type: string) => {
-    setShowModal(type);
-  };
+
 
   return (
     <>
-      {showModal && <ModalTemplate type={showModal} />}
+      {showModal && <ModalTemplate modalType={showModal} />}
       <h1>teste</h1>
       <button
         type='button'
         onClick={() => {
-          handleModal('sleeping');
+          handleShowModal('sleeping');
         }}
       >
         Registro de Sono
@@ -25,7 +22,7 @@ const TestPage = () => {
       <button
         type='button'
         onClick={() => {
-          handleModal("exercise");
+          handleShowModal("exercise");
         }}
       >
         Exercícios
@@ -33,7 +30,7 @@ const TestPage = () => {
       <button
         type='button'
         onClick={() => {
-          handleModal("reading");
+          handleShowModal("reading");
         }}
       >
         Leitura

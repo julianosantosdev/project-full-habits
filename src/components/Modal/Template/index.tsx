@@ -1,37 +1,37 @@
-import { iModalType } from '../../../contexts/ModalContext/types';
-import { ExerciseHours } from '../ExerciseHours';
-import { ModalHeader } from '../Header';
-import { ReadingHours } from '../ReadingHours';
-import { SleepingHours } from '../SleepingHours';
-import { ModalContainer } from './sytles';
+import { iModalType } from "../../../contexts/ModalContext/types";
+import { ExerciseHours } from "../ExerciseHours";
+import { ModalHeader } from "../Header";
+import { ReadingHours } from "../ReadingHours";
+import { SleepingHours } from "../SleepingHours";
+import { ModalContainer } from "./sytles";
 
-const ModalTemplate = ({ type }: iModalType) => {
-  console.log('oi');
+const ModalTemplate = ({ modalType }: iModalType) => {
+  console.log("oi");
   return (
     <ModalContainer>
-      <div className='modalBody'>
+      <div className="modalBody">
         {(() => {
-          switch (type) {
-            case 'sleeping':
+          switch (modalType) {
+            case "sleeping":
               return (
                 <>
-                  <ModalHeader title={'Sono'} />
+                  <ModalHeader title={"Sono"} />
                   <SleepingHours />
                 </>
               );
 
-            case 'exercise':
+            case "exercise":
               return (
                 <>
-                  <ModalHeader title={'Exercícios'} />
+                  <ModalHeader title={"Exercícios"} />
                   <ExerciseHours />
                 </>
               );
 
-            case 'reading':
+            case "reading":
               return (
                 <>
-                  <ModalHeader title={'Leitura'} />
+                  <ModalHeader title={"Leitura"} />
                   <ReadingHours />
                 </>
               );

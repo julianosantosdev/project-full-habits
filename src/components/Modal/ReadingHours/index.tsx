@@ -6,7 +6,7 @@ const ReadingHours = () => {
         <input type='text' />
         <label htmlFor=''>Horas</label>
         <input type='text' />
-        <button type='button'></button>
+        <button type='button'>Adicionar</button>
       </form>
     </div>
   );
