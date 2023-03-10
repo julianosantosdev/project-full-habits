@@ -5,6 +5,7 @@ import { StyledMain } from "./style";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../contexts/UserContext";
 import { useContext } from "react";
+import { Header } from "../../components/Header";
 
 interface IUseForm {
   email: string;
@@ -36,6 +37,7 @@ const LoginPage = () => {
 
   return (
     <StyledMain>
+      <Header showButtons={null} />
       <form onSubmit={handleSubmit(onSubmit)}>
         <h1 className="heading-2">Login</h1>
         <div className="form-container">
