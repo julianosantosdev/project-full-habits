@@ -51,4 +51,10 @@ export const GlobalColorAndTypography = createGlobalStyle`
     font-size: 0.75rem;
     font-weight: 400;
   }
+
+  .text-error{
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--color-error);
+  }
 `;
