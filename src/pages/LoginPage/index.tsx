@@ -1,11 +1,13 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { useUserContext } from "../../hooks/useUserContext";
 import { StyledMain } from "./style";
 import { Link } from "react-router-dom";
 import { Input } from "../../components/Input";
 import { StyledButton } from "../../styles/buttonStyles";
+import { UserContext } from "../../contexts/UserContext";
+import { useContext } from "react";
+import { Header } from "../../components/Header";
 
 interface IUseForm {
   email: string;
@@ -22,8 +24,8 @@ const schema = yup
   })
   .required();
 
-export const LoginPage = () => {
-  const { loginUser } = useUserContext();
+const LoginPage = () => {
+  const { loginUser } = useContext(UserContext);
 
   const {
     register,
@@ -37,6 +39,7 @@ export const LoginPage = () => {
 
   return (
     <StyledMain>
+      <Header showButtons={null} />
       <form onSubmit={handleSubmit(onSubmit)}>
         <h1 className="heading-2">Login</h1>
         <div className="form-container">
@@ -65,3 +68,5 @@ export const LoginPage = () => {
     </StyledMain>
   );
 };
+
+export { LoginPage };

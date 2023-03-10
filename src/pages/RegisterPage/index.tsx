@@ -2,10 +2,12 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { StyledMain } from "./style";
-import { useUserContext } from "../../hooks/useUserContext";
 import { Link } from "react-router-dom";
 import { Input } from "../../components/Input";
 import { StyledButton } from "../../styles/buttonStyles";
+import { useContext } from "react";
+import { UserContext } from "../../contexts/UserContext";
+import { Header } from "../../components/Header";
 
 interface IUseForm {
   name: string;
@@ -32,7 +34,7 @@ const schema = yup
   .required();
 
 export const RegisterPage = () => {
-  const { registerUser } = useUserContext();
+  const { registerUser } = useContext(UserContext);
 
   const {
     register,
@@ -46,6 +48,7 @@ export const RegisterPage = () => {
 
   return (
     <StyledMain>
+      <Header showButtons={null} />
       <form onSubmit={handleSubmit(onSubmit)}>
         <h1 className="heading-2">Cadastre-se</h1>
         <div className="form-container">

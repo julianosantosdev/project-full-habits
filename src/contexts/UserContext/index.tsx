@@ -1,33 +1,17 @@
 import { createContext, ReactNode, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { api } from "../services/api";
+import { api } from "../../services/api";
+import {
+  ILoginUser,
+  IRegisterUser,
+  IUserContext,
+  IUserProviderProps,
+} from "./types";
 
-interface IUserProviderProps {
-  children: ReactNode;
-}
+const UserContext = createContext<IUserContext>({} as IUserContext);
 
-interface IRegisterUser {
-  email: string;
-  password: string;
-  name: string;
-}
-
-interface ILoginUser {
-  email: string;
-  password: string;
-}
-
-interface IUserContext {
-  user: IRegisterUser | null;
-  setUser: React.Dispatch<React.SetStateAction<null>>;
-  registerUser: (data: IRegisterUser) => Promise<void>;
-  loginUser: (data: ILoginUser) => Promise<void>;
-}
-
-export const UserContext = createContext<IUserContext | null>(null);
-
-export const UserProvider = ({ children }: IUserProviderProps) => {
+const UserProvider = ({ children }: IUserProviderProps) => {
   const navigate = useNavigate();
 
   const [user, setUser] = useState(null);
@@ -60,3 +44,5 @@ export const UserProvider = ({ children }: IUserProviderProps) => {
     </UserContext.Provider>
   );
 };
+
+export { UserContext, UserProvider };

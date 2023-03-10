@@ -1,3 +1,4 @@
+import { Header } from "../../components/Header";
 import { ExercisesHabbits } from "./HabbitsComponents/Exercise";
 import { ReadingHabbits } from "./HabbitsComponents/Reading";
 import { SleepHabbits } from "./HabbitsComponents/Sleep";
@@ -8,6 +9,7 @@ const DashboardPage = () => {
 
   return (
     <DashBoardContent>
+      <Header showButtons="show" />
       <DashboardContainer>
         <h1>Meu Resumo</h1>
         <h4>Olá, {userName}</h4>
@@ -22,4 +24,3 @@ const DashboardPage = () => {
 };
 
 export { DashboardPage };
-
