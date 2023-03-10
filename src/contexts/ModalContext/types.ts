@@ -13,5 +13,11 @@ interface iModalContext {
   handleCloseModal: () => void;
 }
 
-export type { iModalContextProps, iModalType, iModalContext };
+interface IInput {
+  type: string;
+  placeholder: string;
+  id: string;
+}
+
+export type { iModalContextProps, iModalType, iModalContext, IInput };
 
