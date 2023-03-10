@@ -4,6 +4,8 @@ import * as yup from "yup";
 import { useUserContext } from "../../hooks/useUserContext";
 import { StyledMain } from "./style";
 import { Link } from "react-router-dom";
+import { Input } from "../../components/Input";
+import { StyledButton } from "../../styles/buttonStyles";
 
 interface IUseForm {
   email: string;
@@ -41,21 +43,23 @@ export const LoginPage = () => {
           <label className="text-1" htmlFor="email">
             E-mail
           </label>
-          <input type="text" id="email" {...register("email")} />
+          <Input placeholder="Digite seu email" type="text" id="email" {...register("email")} />
           <p>{errors.email?.message}</p>
 
           <label className="text-1" htmlFor="password">
             Senha
           </label>
-          <input type="password" id="password" {...register("password")} />
+          <Input placeholder="Digite sua senha" type="password" id="password" {...register("password")} />
           <p>{errors.password?.message}</p>
+        <StyledButton type="submit">Entrar</StyledButton>
         </div>
-        <button type="submit">Entrar</button>
         <div className="register-container">
           <p>Não tem conta?</p>
-          <Link className="link-register" to="/register">
-            Cadastre-se
-          </Link>
+          <StyledButton>
+            <Link className="link-register" to="/register">
+              Cadastre-se
+            </Link>
+          </StyledButton>
         </div>
       </form>
     </StyledMain>

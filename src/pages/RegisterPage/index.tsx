@@ -4,6 +4,8 @@ import * as yup from "yup";
 import { StyledMain } from "./style";
 import { useUserContext } from "../../hooks/useUserContext";
 import { Link } from "react-router-dom";
+import { Input } from "../../components/Input";
+import { StyledButton } from "../../styles/buttonStyles";
 
 interface IUseForm {
   name: string;
@@ -50,35 +52,38 @@ export const RegisterPage = () => {
           <label className="text-1" htmlFor="nome">
             Nome
           </label>
-          <input type="text" id="nome" {...register("name")} />
+          <Input placeholder="Digite seu nome" type="text" id="nome" {...register("name")} />
           <p>{errors.name?.message}</p>
 
           <label className="text-1" htmlFor="email">
             E-mail
           </label>
-          <input type="text" id="email" {...register("email")} />
+          <Input placeholder="Digite seu email" type="text" id="email" {...register("email")} />
           <p>{errors.email?.message}</p>
 
           <label className="text-1" htmlFor="password">
             Senha
           </label>
-          <input type="password" id="password" {...register("password")} />
+          <Input placeholder="Digite sua senha" type="password" id="password" {...register("password")} />
           <p>{errors.password?.message}</p>
 
           <label className="text-1" htmlFor="confirmPassword">
             Confirme a senha
           </label>
-          <input
+          <Input 
+            placeholder="Confirme sua senha"
             type="password"
             id="confirmPassword"
             {...register("confirmPassword")}
           />
           <p>{errors.confirmPassword?.message}</p>
-        </div>
-        <button type="submit">Criar conta</button>
+        <StyledButton type="submit">Criar conta</StyledButton>
+        <StyledButton>
         <Link className="link-login" to="/">
           Login
         </Link>
+        </StyledButton>
+        </div>
       </form>
     </StyledMain>
   );
