@@ -2,11 +2,10 @@ import styled from "styled-components";
 
 export const HeaderStyled = styled.header`
   width: 100vw;
-  height: 15%;
+  height: 10%;
   background-color: #6856f9;
   position: fixed;
   top: 0;
-  margin-bottom: 150vh;
 
   // display
   display: flex;
@@ -18,6 +17,8 @@ export const HeaderStyled = styled.header`
   font-weight: bold;
 
   div {
+    display: flex;
+    flex-direction: row;
     margin-left: 15px;
     margin-right: 15px;
   }
@@ -29,7 +30,7 @@ export const HeaderStyled = styled.header`
   }
 
   img {
-    width: 100%;
+    width: 70%;
   }
 
   button {
@@ -41,9 +42,13 @@ export const HeaderStyled = styled.header`
     cursor: pointer;
   }
 
+  span {
+    visibility: hidden;
+  }
+
   @media (max-height: 330px) {
     img {
-      width: 70%;
+      width: 50%;
     }
   }
 `;

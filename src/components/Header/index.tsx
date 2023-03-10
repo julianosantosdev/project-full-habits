@@ -9,8 +9,14 @@ interface IHeaderInterface {
 const Header = ({ showButtons }: IHeaderInterface) => {
   return (
     <HeaderStyled>
-      <nav>{showButtons && <img src={hamburguer} alt="logo" />}</nav>
-      <div>
+      <nav>
+        {showButtons && (
+          <span>
+            <img src={hamburguer} />
+          </span>
+        )}
+      </nav>
+      <div className="logo">
         <img src={logo} alt="logo" />
       </div>
       <div>{showButtons && <button>LogOut</button>}</div>
