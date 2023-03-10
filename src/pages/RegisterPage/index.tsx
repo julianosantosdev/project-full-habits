@@ -5,6 +5,7 @@ import { StyledMain } from "./style";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
+import { Header } from "../../components/Header";
 
 interface IUseForm {
   name: string;
@@ -45,6 +46,7 @@ export const RegisterPage = () => {
 
   return (
     <StyledMain>
+      <Header showButtons={null} />
       <form onSubmit={handleSubmit(onSubmit)}>
         <h1 className="heading-2">Cadastre-se</h1>
         <div className="form-container">
