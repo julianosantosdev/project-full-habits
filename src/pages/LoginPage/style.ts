@@ -11,8 +11,8 @@ export const StyledMain = styled.main`
   min-height: 100vh;
 
   form {
-    border: 1px solid red;
     border-radius: var(--border-default);
+    background-color: var(--color-gray);
     width: 100%;
     max-width: 750px;
 

@@ -2,8 +2,9 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { StyledMain } from "./style";
-import { useUserContext } from "../../hooks/useUserContext";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { UserContext } from "../../contexts/UserContext";
 
 interface IUseForm {
   name: string;
@@ -30,7 +31,7 @@ const schema = yup
   .required();
 
 export const RegisterPage = () => {
-  const { registerUser } = useUserContext();
+  const { registerUser } = useContext(UserContext);
 
   const {
     register,
@@ -51,19 +52,19 @@ export const RegisterPage = () => {
             Nome
           </label>
           <input type="text" id="nome" {...register("name")} />
-          <p>{errors.name?.message}</p>
+          <p className="text-error">{errors.name?.message}</p>
 
           <label className="text-1" htmlFor="email">
             E-mail
           </label>
           <input type="text" id="email" {...register("email")} />
-          <p>{errors.email?.message}</p>
+          <p className="text-error">{errors.email?.message}</p>
 
           <label className="text-1" htmlFor="password">
             Senha
           </label>
           <input type="password" id="password" {...register("password")} />
-          <p>{errors.password?.message}</p>
+          <p className="text-error">{errors.password?.message}</p>
 
           <label className="text-1" htmlFor="confirmPassword">
             Confirme a senha
@@ -73,7 +74,7 @@ export const RegisterPage = () => {
             id="confirmPassword"
             {...register("confirmPassword")}
           />
-          <p>{errors.confirmPassword?.message}</p>
+          <p className="text-error">{errors.confirmPassword?.message}</p>
         </div>
         <button type="submit">Criar conta</button>
         <Link className="link-login" to="/">
