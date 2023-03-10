@@ -10,7 +10,8 @@ const DashboardPage = () => {
     <DashBoardContent>
       <DashboardContainer>
         <h1>Meu Resumo</h1>
-        <div className="habbitsResume__container">
+        <h4>Olá, {userName}</h4>
+        <div className="habbitsResume__content">
           <SleepHabbits />
           <ExercisesHabbits />
           <ReadingHabbits />
