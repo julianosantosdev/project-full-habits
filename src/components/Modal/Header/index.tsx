@@ -1,15 +1,15 @@
-import { useContext } from 'react';
-import { ModalContext } from '../../../contexts/ModalContext/ModalContext';
+import { useContext } from "react";
+import { ModalContext } from "../../../contexts/ModalContext";
 
 interface iModalTitle {
-  title: string
+  title: string;
 }
 
-const ModalHeader = ({title}: iModalTitle) => {
+const ModalHeader = ({ title }: iModalTitle) => {
   const { handleCloseModal } = useContext(ModalContext);
   return (
-    <div className='modalHeader'>
-      <h3 className='heading-3'>{title}</h3>
+    <div className="modalHeader">
+      <h3 className="heading-3">{title}</h3>
       <button
         onClick={() => {
           handleCloseModal();
@@ -22,4 +22,3 @@ const ModalHeader = ({title}: iModalTitle) => {
 };
 
 export { ModalHeader };
-
