@@ -30,17 +30,25 @@ export const StyledMain = styled.main`
       gap: 8px;
 
       padding: 20px 40px;
+      p{
+        color: #E02D2D;
+      }
     }
 
-    button {
-      border: 1px solid red;
-      margin: 20px;
+    button{
+      /* padding: 5px 20px 0 40px; */
+      /* gap: 15px; */
     }
 
     .link-login {
-      border: solid red 1px;
-      text-align: center;
-      margin: 20px;
+        text-align: center;
+        height: 48px;
+        width: 100%;
+        max-width: 668px;
+        border-radius: 8px;
+        border: none;
+        margin-top: 19px;
+        color: var(--color-white);
     }
   }
 `;
