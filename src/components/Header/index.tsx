@@ -1,12 +1,20 @@
 import { HeaderStyled } from "./styles";
 import logo from "../../assets/LogoHabbits.png";
 import hamburguer from "../../assets/Hamburguer.png";
+import { useNavigate } from "react-router-dom";
 
 interface IHeaderInterface {
   showButtons: string | null;
 }
 
 const Header = ({ showButtons }: IHeaderInterface) => {
+  const navigate = useNavigate();
+
+  const handleLogOut = () => {
+    // logica aqui
+    navigate("/");
+  };
+
   return (
     <HeaderStyled>
       <nav>
@@ -19,7 +27,17 @@ const Header = ({ showButtons }: IHeaderInterface) => {
       <div className="logo">
         <img src={logo} alt="logo" />
       </div>
-      <div>{showButtons && <button>LogOut</button>}</div>
+      <div>
+        {showButtons && (
+          <button
+            onClick={() => {
+              handleLogOut();
+            }}
+          >
+            LogOut
+          </button>
+        )}
+      </div>
     </HeaderStyled>
   );
 };
