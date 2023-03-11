@@ -12,7 +12,6 @@ export const StyledMain = styled.main`
 
   form {
     border-radius: var(--border-default);
-    background-color: var(--color-gray);
     width: 100%;
     max-width: 750px;
 
@@ -27,32 +26,37 @@ export const StyledMain = styled.main`
     .form-container {
       display: flex;
       flex-direction: column;
+
       gap: 8px;
 
       padding: 20px 40px;
+      p{
+        color: #E02D2D;
+      }
     }
-
-    button {
-      border: 1px solid red;
-      margin: 20px;
-    }
-
     .register-container {
-      width: 100%;
-      padding: 5px 20px;
-      margin-bottom: 20px;
-
       display: flex;
       flex-direction: column;
+
+      max-width: 100%;
+      padding: 5px 20px 0 40px;
       gap: 15px;
+      margin-bottom: 20px;
+
 
       p {
         text-align: center;
       }
 
       .link-register {
-        border: 1px solid;
         text-align: center;
+        height: 48px;
+        width: 100%;
+        max-width: 668px;
+        border-radius: 8px;
+        border: none;
+        margin-top: 19px;
+        color: var(--color-white);
       }
     }
   }
