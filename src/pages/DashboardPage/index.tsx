@@ -1,5 +1,5 @@
 import { ExercisesHabbits } from "./HabbitsComponents/Exercise";
-import { ReadingHabbits } from "./HabbitsComponents/Reading";
+import { StudyHabbits } from "./HabbitsComponents/Study";
 import { SleepHabbits } from "./HabbitsComponents/Sleep";
 import { DashboardContainer, DashBoardContent } from "./styles";
 
@@ -14,7 +14,7 @@ const DashboardPage = () => {
         <div className="habbitsResume__content">
           <SleepHabbits />
           <ExercisesHabbits />
-          <ReadingHabbits />
+          <StudyHabbits />
         </div>
       </DashboardContainer>
     </DashBoardContent>
@@ -22,4 +22,3 @@ const DashboardPage = () => {
 };
 
 export { DashboardPage };
-
