@@ -11,6 +11,7 @@ export const StyledMain = styled.main`
   min-height: 100vh;
 
   form {
+    margin-top: 7%;
     background-color: var(--color-gray);
     border-radius: var(--border-default);
     width: 100%;
@@ -30,25 +31,40 @@ export const StyledMain = styled.main`
       gap: 8px;
 
       padding: 20px 40px;
-      p{
-        color: #E02D2D;
+      p {
+        color: #e02d2d;
       }
     }
 
-    button{
+    button {
       /* padding: 5px 20px 0 40px; */
       /* gap: 15px; */
     }
 
     .link-login {
-        text-align: center;
-        height: 48px;
-        width: 100%;
-        max-width: 668px;
-        border-radius: 8px;
-        border: none;
-        margin-top: 19px;
-        color: var(--color-white);
+      text-align: center;
+      height: 48px;
+      width: 100%;
+      max-width: 668px;
+      border-radius: 8px;
+      border: none;
+      margin-top: 19px;
+      color: var(--color-white);
+    }
+  }
+  @media (max-width: 910px) {
+    form {
+      margin-top: 13%;
+    }
+  }
+  @media (max-width: 560px) {
+    form {
+      margin-top: 18%;
+    }
+  }
+  @media (max-width: 480px) {
+    form {
+      margin-top: 25%;
     }
   }
 `;

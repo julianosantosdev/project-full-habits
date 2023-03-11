@@ -18,6 +18,7 @@ export const HeaderStyled = styled.header`
 
   div {
     display: flex;
+    justify-content: center;
     flex-direction: row;
     margin-left: 15px;
     margin-right: 15px;
@@ -30,7 +31,7 @@ export const HeaderStyled = styled.header`
   }
 
   img {
-    width: 70%;
+    width: 55%;
   }
 
   button {
