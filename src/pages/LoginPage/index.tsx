@@ -46,15 +46,25 @@ const LoginPage = () => {
           <label className="text-1" htmlFor="email">
             E-mail
           </label>
-          <Input placeholder="Digite seu email" type="text" id="email" {...register("email")} />
+          <Input
+            placeholder="Digite seu email"
+            type="text"
+            id="email"
+            {...register("email")}
+          />
           <p>{errors.email?.message}</p>
 
           <label className="text-1" htmlFor="password">
             Senha
           </label>
-          <Input placeholder="Digite sua senha" type="password" id="password" {...register("password")} />
+          <Input
+            placeholder="Digite sua senha"
+            type="password"
+            id="password"
+            {...register("password")}
+          />
           <p>{errors.password?.message}</p>
-        <StyledButton type="submit">Entrar</StyledButton>
+          <StyledButton type="submit">Entrar</StyledButton>
         </div>
         <div className="register-container">
           <p>Não tem conta?</p>
