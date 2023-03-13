@@ -8,7 +8,8 @@ import { UserContext } from "../../contexts/UserContext";
 
 const DashboardPage = () => {
   const { user } = useContext(UserContext);
-  const userName = "teste";
+  const userName = user?.name;
+  console.log(user);
   const { autoLoginUser, sleep } = useContext(UserContext);
 
   useEffect(() => {
