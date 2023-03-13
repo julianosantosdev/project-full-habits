@@ -1,17 +1,20 @@
 import { useContext, useState } from "react";
 import { BarChart } from "../../../../components/Charts/Bar";
-import { chartData } from "../../../../components/Charts/data";
 import {} from "chart.js/auto";
 import { UserContext } from "../../../../contexts/UserContext";
 import { DoughnutChart } from "../../../../components/Charts/Doughnut";
 import { ModalContext } from "../../../../contexts/ModalContext";
 
 const ExercisesHabbits = () => {
-  const [userData, setUserData] = useState(chartData);
-
   const { handleShowModal } = useContext(ModalContext);
 
   const { training } = useContext(UserContext);
+
+  // training.sort((a, b) => {
+  //   if (new Date (a.date) < new Date(b.date)) {
+  //     return -1;
+  //   }
+  // });
 
   const barChartTrainingData = {
     labels: training.map((habbit) => habbit.date),
@@ -28,7 +31,7 @@ const ExercisesHabbits = () => {
   };
 
   const doughnutData = training.reduce((acc, cur) => acc + cur.hours, 0);
-  const value = doughnutData / userData.length;
+  const value = doughnutData / training.length;
   const datatochart = [
     {
       label: "Média",
