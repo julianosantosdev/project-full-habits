@@ -42,6 +42,20 @@ const DashboardContainer = styled.section`
     display: flex;
     flex-direction: column;
     gap: 15px;
+
+    button {
+      background-color: #444DF5c2;
+      border-radius: var(--border-default);
+      color: var(--color-white);
+      transition: 300ms;
+      padding: 8px;
+      font-family: "Nunito";
+      font-weight: 700;
+      &:hover {
+        background-color: var(--color-brand-2);
+        transition: 300ms;
+      }
+    }
   }
 `;
 export { DashboardContainer, DashBoardContent };

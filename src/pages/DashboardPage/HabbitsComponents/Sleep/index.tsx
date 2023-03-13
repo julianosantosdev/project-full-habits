@@ -9,11 +9,11 @@ import { ModalContext } from "../../../../contexts/ModalContext";
 const SleepHabbits = () => {
   const [userData, setUserData] = useState(chartData);
 
+  const { handleShowModal } = useContext(ModalContext);  
+
   const { sleep } = useContext(UserContext);
 
-  const { handleShowModal, showModal } = useContext(ModalContext);
-
-  const teste = {
+  const barChartSleepData = {
     labels: sleep.map((habbit) => habbit.date),
     datasets: [
       {
@@ -40,7 +40,7 @@ const SleepHabbits = () => {
     },
   ];
 
-  const teste2 = {
+  const doughnutChartSleepData = {
     labels: datatochart.map((item) => item.label),
     datasets: [
       {
@@ -63,16 +63,15 @@ const SleepHabbits = () => {
         type="button"
         onClick={() => {
           handleShowModal("sleeping");
-          console.log("pfdsfs");
         }}
       >
-        adicionar
+        Adicionar
       </button>
       <p className="heading-4">Acompanhe sua média</p>
-      <BarChart chartData={teste} />
+      <BarChart chartData={barChartSleepData} />
       <p className="heading-4">Comparação com o recomendado</p>
       <span className="text-1">Média: {value.toFixed(1)}</span>
-      <DoughnutChart chartData={teste2} />
+      <DoughnutChart chartData={doughnutChartSleepData} />
     </div>
   );
 };

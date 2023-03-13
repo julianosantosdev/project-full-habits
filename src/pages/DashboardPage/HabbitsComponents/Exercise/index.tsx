@@ -4,13 +4,16 @@ import { chartData } from "../../../../components/Charts/data";
 import {} from "chart.js/auto";
 import { UserContext } from "../../../../contexts/UserContext";
 import { DoughnutChart } from "../../../../components/Charts/Doughnut";
+import { ModalContext } from "../../../../contexts/ModalContext";
 
 const ExercisesHabbits = () => {
   const [userData, setUserData] = useState(chartData);
 
+  const { handleShowModal } = useContext(ModalContext);
+
   const { training } = useContext(UserContext);
 
-  const teste = {
+  const barChartTrainingData = {
     labels: training.map((habbit) => habbit.date),
     datasets: [
       {
@@ -37,7 +40,7 @@ const ExercisesHabbits = () => {
     },
   ];
 
-  const teste2 = {
+  const doughnutChartTrainigData = {
     labels: datatochart.map((item) => item.label),
     datasets: [
       {
@@ -56,14 +59,21 @@ const ExercisesHabbits = () => {
   return (
     <div className="habbitInfo">
       <h4 className="heading-3">Exercícios</h4>
-      <button>adicionar</button>
+      <button
+        onClick={() => {
+          handleShowModal("exercise");
+        }}
+      >
+        Adicionar
+      </button>
       <p className="heading-4">Acompanhe sua média</p>
-      <BarChart chartData={teste} />
+      <BarChart chartData={barChartTrainingData} />
       <p className="heading-4">Comparação com o recomendado</p>
       <span className="text-1">Média: {value.toFixed(1)}</span>
-      <DoughnutChart chartData={teste2} />
+      <DoughnutChart chartData={doughnutChartTrainigData} />
     </div>
   );
 };
 
 export { ExercisesHabbits };
+

@@ -5,15 +5,16 @@ import { useContext, useState } from "react";
 import { UserContext } from "../../../../contexts/UserContext";
 import { IObjectUser } from "../../../../contexts/UserContext/types";
 import { DoughnutChart } from "../../../../components/Charts/Doughnut";
-import { StyledButton } from "../../../../styles/ButtonStyles";
-import { ReadingHours } from "../../../../components/Modal/ReadingHours";
+import { ModalContext } from "../../../../contexts/ModalContext";
 
 const StudyHabbits = () => {
   const [userData, setUserData] = useState(chartData);
 
   const { study } = useContext(UserContext);
 
-  const teste = {
+  const { handleShowModal } = useContext(ModalContext);
+
+  const barChartStudyData = {
     labels: study.map((habbit) => habbit.date),
     datasets: [
       {
@@ -40,7 +41,7 @@ const StudyHabbits = () => {
     },
   ];
 
-  const teste2 = {
+  const doughnutChartStudyData = {
     labels: datatochart.map((item) => item.label),
     datasets: [
       {
@@ -59,14 +60,21 @@ const StudyHabbits = () => {
   return (
     <div className="habbitInfo">
       <h4 className="heading-3">Estudo</h4>
-      <button>Adicionar</button>
+      <button
+        onClick={() => {
+          handleShowModal("study");
+        }}
+      >
+        Adicionar
+      </button>
       <p className="heading-4">Acompanhe sua média</p>
-      <BarChart chartData={teste} />
+      <BarChart chartData={barChartStudyData} />
       <p className="heading-4">Comparação com o recomendado</p>
       <span className="text-1">Média: {value.toFixed(1)}</span>
-      <DoughnutChart chartData={teste2} />
+      <DoughnutChart chartData={doughnutChartStudyData} />
     </div>
   );
 };
 
 export { StudyHabbits };
+

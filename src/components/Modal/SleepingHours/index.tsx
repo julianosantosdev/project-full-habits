@@ -2,6 +2,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useContext } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { toast } from "react-toastify";
+import { ModalContext } from "../../../contexts/ModalContext";
 import { UserContext } from "../../../contexts/UserContext";
 import { api } from "../../../services/api";
 import { StyledButton } from "../../../styles/ButtonStyles";
@@ -11,6 +12,8 @@ import { IHabbitsForm } from "../Template/type";
 
 const SleepingHours = () => {
   const { sleep, setSleep } = useContext(UserContext);
+  const { setShowModal } = useContext(ModalContext);
+
   const {
     register,
     handleSubmit,
@@ -25,10 +28,9 @@ const SleepingHours = () => {
 
     const formDataToSubmit = {
       date: date,
-      hours: parseInt(hours),
+      hours: parseFloat(hours),
       userId: userId,
     };
-    console.log(formDataToSubmit);
 
     try {
       const response = await api.post(`/sleepTimes`, formDataToSubmit, {
@@ -38,7 +40,7 @@ const SleepingHours = () => {
       });
       toast.success("Hábito registrado!");
       setSleep([...sleep, response.data]);
-      console.log(sleep);
+      setShowModal(null);
     } catch (error) {
       toast.error("Erro ao registrar hábito");
       console.log(error);
@@ -76,3 +78,4 @@ const SleepingHours = () => {
 };
 
 export { SleepingHours };
+

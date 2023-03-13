@@ -6,15 +6,15 @@ const appearAnimation = keyframes`
 `;
 
 const ModalContainer = styled.section`
-  min-width: 100%;
-  min-height: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
   background-color: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(4px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   animation: ${appearAnimation};
   animation-duration: 500ms;
   z-index: 999;

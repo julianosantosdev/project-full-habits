@@ -8,9 +8,11 @@ import { toast } from "react-toastify";
 import { api } from "../../../services/api";
 import { useContext } from "react";
 import { UserContext } from "../../../contexts/UserContext";
+import { ModalContext } from "../../../contexts/ModalContext";
 
 const ExerciseHours = () => {
   const { training, setTraining } = useContext(UserContext);
+  const { setShowModal } = useContext(ModalContext);
   const {
     register,
     handleSubmit,
@@ -25,10 +27,9 @@ const ExerciseHours = () => {
 
     const formDataToSubmit = {
       date: date,
-      hours: parseInt(hours),
+      hours: parseFloat(hours),
       userId: userId,
     };
-    console.log(formDataToSubmit);
 
     try {
       const response = await api.post(`/trainingTimes`, formDataToSubmit, {
@@ -37,8 +38,8 @@ const ExerciseHours = () => {
         },
       });
       toast.success("Hábito registrado!");
-      console.log(response.data);
-      // setTraining()
+      setTraining([...training, response.data]);
+      setShowModal(null);
     } catch (error) {
       toast.error("Erro ao registrar hábito");
       console.log(error);
