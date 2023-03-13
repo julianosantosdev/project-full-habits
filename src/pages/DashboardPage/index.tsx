@@ -5,6 +5,8 @@ import { SleepHabbits } from "./HabbitsComponents/Sleep";
 import { DashboardContainer, DashBoardContent } from "./styles";
 import { useContext, useEffect } from "react";
 import { UserContext } from "../../contexts/UserContext";
+import { ModalContext } from "../../contexts/ModalContext";
+import { ModalTemplate } from "../../components/Modal/Template";
 
 const DashboardPage = () => {
   const { user } = useContext(UserContext);
@@ -12,13 +14,16 @@ const DashboardPage = () => {
   const { autoLoginUser, sleep, training, study } = useContext(UserContext);
 
   useEffect(() => {
-    if (sleep.length || training.length || study.length === 0) {
+    if (sleep.length === 0 || training.length === 0 || study.length === 0) {
       autoLoginUser();
     }
-  }, []);
+  }, [sleep, training, study]);
+
+  const { showModal } = useContext(ModalContext);
 
   return (
     <DashBoardContent>
+      {showModal && <ModalTemplate modalType={showModal} />}
       <Header showButtons="show" />
       <DashboardContainer>
         <h1>Meu Resumo</h1>

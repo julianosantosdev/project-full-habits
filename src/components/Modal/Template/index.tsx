@@ -27,7 +27,7 @@ const ModalTemplate = ({ modalType }: iModalType) => {
                 </>
               );
 
-            case "reading":
+            case "study":
               return (
                 <>
                   <ModalHeader title={"Estudos"} />
@@ -44,4 +44,3 @@ const ModalTemplate = ({ modalType }: iModalType) => {
 };
 
 export { ModalTemplate };
-

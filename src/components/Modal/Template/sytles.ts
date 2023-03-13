@@ -17,6 +17,7 @@ const ModalContainer = styled.section`
   position: absolute;
   animation: ${appearAnimation};
   animation-duration: 500ms;
+  z-index: 999;
 
   .modalBody {
     max-width: 23rem;
@@ -64,4 +65,3 @@ const ModalContainer = styled.section`
 `;
 
 export { ModalContainer };
-

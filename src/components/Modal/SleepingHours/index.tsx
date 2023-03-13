@@ -37,8 +37,8 @@ const SleepingHours = () => {
         },
       });
       toast.success("Hábito registrado!");
-      console.log(response.data);
-      // setSleep()
+      setSleep([...sleep, response.data]);
+      console.log(sleep);
     } catch (error) {
       toast.error("Erro ao registrar hábito");
       console.log(error);
@@ -76,4 +76,3 @@ const SleepingHours = () => {
 };
 
 export { SleepingHours };
-

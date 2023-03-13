@@ -4,11 +4,14 @@ import { chartData } from "../../../../components/Charts/data";
 import {} from "chart.js/auto";
 import { UserContext } from "../../../../contexts/UserContext";
 import { DoughnutChart } from "../../../../components/Charts/Doughnut";
+import { ModalContext } from "../../../../contexts/ModalContext";
 
 const SleepHabbits = () => {
   const [userData, setUserData] = useState(chartData);
 
   const { sleep } = useContext(UserContext);
+
+  const { handleShowModal, showModal } = useContext(ModalContext);
 
   const teste = {
     labels: sleep.map((habbit) => habbit.date),
@@ -56,7 +59,15 @@ const SleepHabbits = () => {
   return (
     <div className="habbitInfo">
       <h4 className="heading-3">Sono</h4>
-      <button>adicionar</button>
+      <button
+        type="button"
+        onClick={() => {
+          handleShowModal("sleeping");
+          console.log("pfdsfs");
+        }}
+      >
+        adicionar
+      </button>
       <p className="heading-4">Acompanhe sua média</p>
       <BarChart chartData={teste} />
       <p className="heading-4">Comparação com o recomendado</p>
