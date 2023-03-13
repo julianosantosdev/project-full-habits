@@ -37,9 +37,7 @@ const options = {
 };
 
 export const DoughnutChart = ({ chartData }) => {
-  return (
-    <Doughnut data={chartData} options={options} />
-  );
+  return <Doughnut data={chartData} options={options} />;
 };
 
 /* ----------------------- LOGICA DO GRÁFICO CIRCULAR ----------------------- */

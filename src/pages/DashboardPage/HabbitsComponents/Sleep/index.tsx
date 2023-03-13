@@ -3,6 +3,7 @@ import { BarChart } from "../../../../components/Charts/Bar";
 import { chartData } from "../../../../components/Charts/data";
 import {} from "chart.js/auto";
 import { UserContext } from "../../../../contexts/UserContext";
+import { DoughnutChart } from "../../../../components/Charts/Doughnut";
 
 const SleepHabbits = () => {
   const [userData, setUserData] = useState(chartData);

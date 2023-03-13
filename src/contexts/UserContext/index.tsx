@@ -1,10 +1,4 @@
-import {
-  createContext,
-  ReactNode,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
+import { createContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { api } from "../../services/api";
@@ -24,9 +18,9 @@ const UserProvider = ({ children }: IUserProviderProps) => {
 
   const [user, setUser] = useState<IRegisterUser | null>(null);
 
-  const [sleep, setSleep] = useState<IObjectUser | null>(null);
-  const [training, setTraining] = useState<IObjectUser | null>(null);
-  const [study, setStudy] = useState<IObjectUser | null>(null);
+  const [sleep, setSleep] = useState<IObjectUser>([]);
+  const [training, setTraining] = useState<IObjectUser>([]);
+  const [study, setStudy] = useState<IObjectUser>([]);
 
   const registerUser = async (data: IRegisterUser) => {
     try {
@@ -64,6 +58,7 @@ const UserProvider = ({ children }: IUserProviderProps) => {
       });
 
       toast.success("Login efetuado com sucesso");
+      setUser(response.data.user);
       navigate("/dashboard");
     } catch (error) {
       console.error(error);
@@ -114,10 +109,6 @@ const UserProvider = ({ children }: IUserProviderProps) => {
     }
   };
 
-  useEffect(() => {
-    autoLoginUser();
-  }, []);
-
   const getObjectUser = async ({
     id,
     habbitName,
@@ -151,6 +142,7 @@ const UserProvider = ({ children }: IUserProviderProps) => {
         sleep,
         study,
         training,
+        autoLoginUser,
       }}
     >
       {children}

@@ -16,6 +16,7 @@ interface ILoginUser {
 }
 
 interface IObjectUser {
+  length?: number;
   date: string;
   hours: number;
   userId: number;
@@ -25,7 +26,7 @@ interface IObjectUser {
 interface IGetObjectUserProps {
   id: number;
   habbitName: "sleepTimes" | "studyTimes" | "trainingTimes";
-  setState: React.Dispatch<React.SetStateAction<IObjectUser | null>>;
+  setState: React.Dispatch<React.SetStateAction<IObjectUser>>;
 }
 
 interface IUserContext {
@@ -40,12 +41,13 @@ interface IUserContext {
     habbitName,
     setState,
   }: IGetObjectUserProps) => Promise<void>;
-  sleep: IObjectUser | null;
-  setSleep: React.Dispatch<React.SetStateAction<IObjectUser | null>>;
-  training: IObjectUser | null;
-  setTraining: React.Dispatch<React.SetStateAction<IObjectUser | null>>;
-  study: IObjectUser | null;
-  setStudy: React.Dispatch<React.SetStateAction<IObjectUser | null>>;
+  sleep: IObjectUser;
+  setSleep: React.Dispatch<React.SetStateAction<IObjectUser>>;
+  training: IObjectUser;
+  setTraining: React.Dispatch<React.SetStateAction<IObjectUser>>;
+  study: IObjectUser;
+  setStudy: React.Dispatch<React.SetStateAction<IObjectUser>>;
+  autoLoginUser: () => Promise<void>;
 }
 
 export type {
