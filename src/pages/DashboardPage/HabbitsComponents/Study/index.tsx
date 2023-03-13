@@ -8,9 +8,13 @@ import { DoughnutChart } from "../../../../components/Charts/Doughnut";
 import { ModalContext } from "../../../../contexts/ModalContext";
 
 const StudyHabbits = () => {
-  const [userData, setUserData] = useState(chartData);
-
   const { study } = useContext(UserContext);
+
+  // study.sort((a, b) => {
+  //   if (a.date < b.date) {
+  //     return -1;
+  //   }
+  // });
 
   const { handleShowModal } = useContext(ModalContext);
 
@@ -29,7 +33,7 @@ const StudyHabbits = () => {
   };
 
   const doughnutData = study.reduce((acc, cur) => acc + cur.hours, 0);
-  const value = doughnutData / userData.length;
+  const value = doughnutData / study.length;
   const datatochart = [
     {
       label: "Média",

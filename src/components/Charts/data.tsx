@@ -1,3 +1,4 @@
+// ONLY FOR CHART TESTS!!!
 const chartData = [
   { date: "01/01/23", hours: 8 },
   { date: "02/01/23", hours: 5 },

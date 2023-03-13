@@ -7,11 +7,15 @@ import { DoughnutChart } from "../../../../components/Charts/Doughnut";
 import { ModalContext } from "../../../../contexts/ModalContext";
 
 const SleepHabbits = () => {
-  const [userData, setUserData] = useState(chartData);
-
-  const { handleShowModal } = useContext(ModalContext);  
+  const { handleShowModal } = useContext(ModalContext);
 
   const { sleep } = useContext(UserContext);
+
+  // sleep.sort((a, b) => {
+  //   if (a.date < b.date) {
+  //     return -1;
+  //   }
+  // });
 
   const barChartSleepData = {
     labels: sleep.map((habbit) => habbit.date),
@@ -28,7 +32,7 @@ const SleepHabbits = () => {
   };
 
   const doughnutData = sleep.reduce((acc, cur) => acc + cur.hours, 0);
-  const value = doughnutData / userData.length;
+  const value = doughnutData / sleep.length;
   const datatochart = [
     {
       label: "Media",
@@ -77,3 +81,4 @@ const SleepHabbits = () => {
 };
 
 export { SleepHabbits };
+
