@@ -18,16 +18,3 @@ export const Router = () => (
   </Routes>
 );
 
-{
-  /* <Routes>
-      <Route path='/' element={<PublicPages />}>
-        <Route index element={<LoginPage />} />
-        <Route path='register' element={<RegisterPage />} />
-      </Route>
-      
-      <Route path='/shop' element={<ProtectedPages />}>
-        <Route index element={<ShopPage />} />
-      </Route>
-    </Routes> */
-}
-
