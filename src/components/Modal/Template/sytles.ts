@@ -20,7 +20,7 @@ const ModalContainer = styled.section`
 
   .modalBody {
     max-width: 23rem;
-    max-height: 23rem;
+    max-height: 25rem;
     min-height: 16rem;
     width: 90%;
     background-color: var(--color-gray);
@@ -50,7 +50,11 @@ const ModalContainer = styled.section`
     padding: 16px;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.5rem;
+
+    button {
+      font-size: 16px;
+    }
   }
 `;
 
