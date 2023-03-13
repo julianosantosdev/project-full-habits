@@ -14,7 +14,13 @@ const options = {
   responsive: true,
   plugins: {
     legend: {
-      display: false,
+      display: true,
+      labels: {
+        color: "#6856F9",
+        font: {
+          size: 16,
+        },
+      },
     },
   },
   scales: {

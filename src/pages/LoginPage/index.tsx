@@ -68,11 +68,9 @@ const LoginPage = () => {
         </div>
         <div className="register-container">
           <p>Não tem conta?</p>
-          <StyledButton>
-            <Link className="link-register" to="/register">
-              Cadastre-se
-            </Link>
-          </StyledButton>
+          <Link className="link-register" to="/register">
+            Cadastre-se
+          </Link>
         </div>
       </form>
     </StyledMain>

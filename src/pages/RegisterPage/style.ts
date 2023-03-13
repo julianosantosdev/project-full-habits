@@ -45,13 +45,21 @@ export const StyledMain = styled.main`
 
     .link-login {
       text-align: center;
-      height: 48px;
       width: 100%;
       max-width: 668px;
+      height: 48px;
       border-radius: 8px;
       border: none;
       margin-top: 19px;
+
+      font-size: 28px;
+      font-family: "Nunito", sans-serif;
       color: var(--color-white);
+      background-color: #aa66ff;
+
+      :hover {
+        background-color: #dcbfff;
+      }
     }
   }
   /* @media (max-width: 910px) {

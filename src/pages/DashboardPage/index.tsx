@@ -9,11 +9,10 @@ import { UserContext } from "../../contexts/UserContext";
 const DashboardPage = () => {
   const { user } = useContext(UserContext);
   const userName = user?.name;
-  console.log(user);
-  const { autoLoginUser, sleep } = useContext(UserContext);
+  const { autoLoginUser, sleep, training, study } = useContext(UserContext);
 
   useEffect(() => {
-    if (sleep.length === 0) {
+    if (sleep.length || training.length || study.length === 0) {
       autoLoginUser();
     }
   }, []);
