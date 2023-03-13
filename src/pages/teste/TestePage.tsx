@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Card } from "../../components/CardChart";
 import { ModalTemplate } from "../../components/Modal/Template";
 import { ModalContext } from "../../contexts/ModalContext";
 
@@ -9,6 +10,7 @@ const TestPage = () => {
     <>
       {showModal && <ModalTemplate modalType={showModal} />}
       <h1>teste</h1>
+
       <button
         type="button"
         onClick={() => {
