@@ -2,10 +2,12 @@ import styled from "styled-components";
 
 export const HeaderStyled = styled.header`
   width: 100vw;
-  height: 10%;
+  height: 5vw;
+  min-height: 55px;
   background-color: #6856f9;
   position: fixed;
   top: 0;
+  z-index: 1;
 
   // display
   display: flex;
@@ -31,7 +33,8 @@ export const HeaderStyled = styled.header`
   }
 
   img {
-    width: 55%;
+    width: 75%;
+    min-width: 210px;
   }
 
   button {
