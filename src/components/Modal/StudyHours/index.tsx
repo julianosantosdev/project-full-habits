@@ -1,11 +1,11 @@
 import { yupResolver } from "@hookform/resolvers/yup";
-import { SubmitHandler, useForm } from "react-hook-form";
+import { useForm, SubmitHandler } from "react-hook-form";
 import { StyledButton } from "../../../styles/ButtonStyles";
 import { Input } from "../../Input";
 import { modalFormSchema } from "../Template/formSchema";
 import { IHabbitsForm } from "../Template/type";
 
-const SleepingHours = () => {
+const StudyHours = () => {
   const {
     register,
     handleSubmit,
@@ -46,5 +46,5 @@ const SleepingHours = () => {
   );
 };
 
-export { SleepingHours };
+export { StudyHours };
 

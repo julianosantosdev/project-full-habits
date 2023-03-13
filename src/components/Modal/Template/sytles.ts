@@ -55,6 +55,11 @@ const ModalContainer = styled.section`
     button {
       font-size: 16px;
     }
+
+    p {
+      color: var(--color-error);
+      font-size: 0.75rem;
+    }
   }
 `;
 
