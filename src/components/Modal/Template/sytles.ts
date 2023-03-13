@@ -1,4 +1,9 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const appearAnimation = keyframes`
+0% {opacity: 0}
+100% {opacity: 100}
+`;
 
 const ModalContainer = styled.section`
   min-width: 100%;
@@ -10,10 +15,12 @@ const ModalContainer = styled.section`
   align-items: center;
   justify-content: center;
   position: absolute;
+  animation: ${appearAnimation};
+  animation-duration: 500ms;
 
   .modalBody {
     max-width: 23rem;
-    max-height: 23rem;
+    max-height: 25rem;
     min-height: 16rem;
     width: 90%;
     background-color: var(--color-gray);
@@ -43,7 +50,11 @@ const ModalContainer = styled.section`
     padding: 16px;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.5rem;
+
+    button {
+      font-size: 16px;
+    }
   }
 `;
 
