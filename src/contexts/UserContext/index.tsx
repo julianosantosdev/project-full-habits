@@ -18,9 +18,9 @@ const UserProvider = ({ children }: IUserProviderProps) => {
 
   const [user, setUser] = useState<IRegisterUser | null>(null);
 
-  const [sleep, setSleep] = useState<IObjectUser>([]);
-  const [training, setTraining] = useState<IObjectUser>([]);
-  const [study, setStudy] = useState<IObjectUser>([]);
+  const [sleep, setSleep] = useState<IObjectUser[]>([]);
+  const [training, setTraining] = useState<IObjectUser[]>([]);
+  const [study, setStudy] = useState<IObjectUser[]>([]);
 
   const registerUser = async (data: IRegisterUser) => {
     try {
@@ -150,4 +150,3 @@ const UserProvider = ({ children }: IUserProviderProps) => {
 };
 
 export { UserContext, UserProvider };
-
