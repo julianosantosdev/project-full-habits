@@ -3,9 +3,19 @@ import { ExercisesHabbits } from "./HabbitsComponents/Exercise";
 import { StudyHabbits } from "./HabbitsComponents/Study";
 import { SleepHabbits } from "./HabbitsComponents/Sleep";
 import { DashboardContainer, DashBoardContent } from "./styles";
+import { useContext, useEffect } from "react";
+import { UserContext } from "../../contexts/UserContext";
 
 const DashboardPage = () => {
-  const userName = "Usuário";
+  const { user } = useContext(UserContext);
+  const userName = "teste";
+  const { autoLoginUser, sleep } = useContext(UserContext);
+
+  useEffect(() => {
+    if (sleep.length === 0) {
+      autoLoginUser();
+    }
+  }, []);
 
   return (
     <DashBoardContent>
