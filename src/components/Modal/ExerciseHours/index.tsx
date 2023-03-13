@@ -1,5 +1,5 @@
 import { Input } from "../../Input";
-import { StyledButton } from "../../../styles/buttonStyles";
+import { StyledButton } from "../../../styles/ButtonStyles";
 
 const ExerciseHours = () => {
   return (

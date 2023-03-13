@@ -1,4 +1,4 @@
-import { StyledButton } from "../../../styles/buttonStyles";
+import { StyledButton } from "../../../styles/ButtonStyles";
 import { Input } from "../../Input";
 
 const ReadingHours = () => {

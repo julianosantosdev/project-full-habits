@@ -1,4 +1,4 @@
-import { StyledButton } from "../../../styles/buttonStyles";
+import { StyledButton } from "../../../styles/ButtonStyles";
 import { Input } from "../../Input";
 
 const SleepingHours = () => {
@@ -21,3 +21,4 @@ const SleepingHours = () => {
 };
 
 export { SleepingHours };
+
