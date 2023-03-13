@@ -102,6 +102,8 @@ const UserProvider = ({ children }: IUserProviderProps) => {
         });
 
         setUser(response.data);
+        console.log(response);
+        
         navigate("/dashboard");
       } catch (error) {
         console.error(error);
