@@ -11,6 +11,7 @@ export const StyledMain = styled.main`
   min-height: 100vh;
 
   form {
+    margin-top: 4%;
     border-radius: var(--border-default);
     width: 100%;
     max-width: 750px;
@@ -30,8 +31,8 @@ export const StyledMain = styled.main`
       gap: 8px;
 
       padding: 20px 40px;
-      p{
-        color: #E02D2D;
+      p {
+        color: #e02d2d;
       }
     }
     .register-container {
@@ -42,7 +43,6 @@ export const StyledMain = styled.main`
       padding: 5px 20px 0 40px;
       gap: 15px;
       margin-bottom: 20px;
-
 
       p {
         text-align: center;

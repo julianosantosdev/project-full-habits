@@ -1,7 +1,7 @@
 import { HeaderStyled } from "./styles";
 import logo from "../../assets/LogoHabbits.png";
 import hamburguer from "../../assets/Hamburguer.png";
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
 
 interface IHeaderInterface {
