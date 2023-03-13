@@ -100,10 +100,7 @@ const UserProvider = ({ children }: IUserProviderProps) => {
           habbitName: "trainingTimes",
           setState: setTraining,
         });
-
         setUser(response.data);
-        console.log(response);
-        
         navigate("/dashboard");
       } catch (error) {
         console.error(error);
@@ -153,3 +150,4 @@ const UserProvider = ({ children }: IUserProviderProps) => {
 };
 
 export { UserContext, UserProvider };
+

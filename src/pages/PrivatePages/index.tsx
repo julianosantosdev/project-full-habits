@@ -3,9 +3,7 @@ import { Outlet, useNavigate } from 'react-router-dom';
 import { UserContext } from '../../contexts/UserContext';
 
 const ProtectedPages = () => {
-  const { user } = useContext(UserContext);
-  console.log(user);
-  
+  const { user } = useContext(UserContext);  
   const navigate = useNavigate();
   const token = localStorage.getItem('@TOKEN-HABBITS');
 
