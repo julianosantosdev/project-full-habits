@@ -1,12 +1,11 @@
 import { iModalType } from "../../../contexts/ModalContext/types";
 import { ExerciseHours } from "../ExerciseHours";
 import { ModalHeader } from "../Header";
-import { ReadingHours } from "../ReadingHours";
+import { StudyHours } from "../StudyHours";
 import { SleepingHours } from "../SleepingHours";
 import { ModalContainer } from "./sytles";
 
 const ModalTemplate = ({ modalType }: iModalType) => {
-  console.log("oi");
   return (
     <ModalContainer>
       <div className="modalBody">
@@ -31,8 +30,8 @@ const ModalTemplate = ({ modalType }: iModalType) => {
             case "reading":
               return (
                 <>
-                  <ModalHeader title={"Leitura"} />
-                  <ReadingHours />
+                  <ModalHeader title={"Estudos"} />
+                  <StudyHours />
                 </>
               );
             default:
