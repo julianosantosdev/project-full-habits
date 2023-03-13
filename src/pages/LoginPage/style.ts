@@ -11,6 +11,7 @@ export const StyledMain = styled.main`
   min-height: 100vh;
 
   form {
+    background-color: var(--color-gray);
     position: absolute;
     top: 12vh;
     border-radius: var(--border-default);
@@ -50,13 +51,21 @@ export const StyledMain = styled.main`
 
       .link-register {
         text-align: center;
-        height: 48px;
         width: 100%;
         max-width: 668px;
+        height: 48px;
         border-radius: 8px;
         border: none;
         margin-top: 19px;
+
+        font-size: 28px;
+        font-family: "Nunito", sans-serif;
         color: var(--color-white);
+        background-color: #aa66ff;
+
+        :hover {
+          background-color: #dcbfff;
+        }
       }
     }
   }
