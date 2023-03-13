@@ -11,7 +11,7 @@ export const StyledMain = styled.main`
   min-height: 100vh;
 
   form {
-    border: 1px solid red;
+    margin-top: 7%;
     background-color: var(--color-gray);
     border-radius: var(--border-default);
     width: 100%;
@@ -31,17 +31,40 @@ export const StyledMain = styled.main`
       gap: 8px;
 
       padding: 20px 40px;
+      p {
+        color: #e02d2d;
+      }
     }
 
     button {
-      border: 1px solid red;
-      margin: 20px;
+      /* padding: 5px 20px 0 40px; */
+      /* gap: 15px; */
     }
 
     .link-login {
-      border: solid red 1px;
       text-align: center;
-      margin: 20px;
+      height: 48px;
+      width: 100%;
+      max-width: 668px;
+      border-radius: 8px;
+      border: none;
+      margin-top: 19px;
+      color: var(--color-white);
+    }
+  }
+  @media (max-width: 910px) {
+    form {
+      margin-top: 13%;
+    }
+  }
+  @media (max-width: 560px) {
+    form {
+      margin-top: 18%;
+    }
+  }
+  @media (max-width: 480px) {
+    form {
+      margin-top: 25%;
     }
   }
 `;
