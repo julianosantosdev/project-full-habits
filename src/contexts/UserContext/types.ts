@@ -16,6 +16,7 @@ interface ILoginUser {
 }
 
 interface IObjectUser {
+  reduce(arg0: (acc: any, cur: any) => any, arg1: number): unknown;
   length?: number;
   date: string;
   hours: number;

@@ -37,6 +37,11 @@ const DashboardContainer = styled.section`
     background-color: white;
     border-radius: var(--border-default);
     padding: 16px;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
   }
 `;
 export { DashboardContainer, DashBoardContent };
