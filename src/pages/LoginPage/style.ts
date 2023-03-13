@@ -11,11 +11,11 @@ export const StyledMain = styled.main`
   min-height: 100vh;
 
   form {
-    margin-top: 4%;
+    position: absolute;
+    top: 12vh;
     border-radius: var(--border-default);
     width: 100%;
     max-width: 750px;
-
     display: flex;
     flex-direction: column;
 
@@ -60,4 +60,15 @@ export const StyledMain = styled.main`
       }
     }
   }
+  /* @media (max-width: 480px) {
+    form {
+      margin-top: 20%;
+    }
+  }
+
+  @media (max-height: 440px) {
+    form {
+      margin-top: 15%;
+    }
+  } */
 `;

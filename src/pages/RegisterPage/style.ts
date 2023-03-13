@@ -8,10 +8,12 @@ export const StyledMain = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 113vh;
+  gap: 30px;
 
   form {
-    margin-top: 7%;
+    position: absolute;
+    top: 15vh;
     background-color: var(--color-gray);
     border-radius: var(--border-default);
     width: 100%;
@@ -52,7 +54,7 @@ export const StyledMain = styled.main`
       color: var(--color-white);
     }
   }
-  @media (max-width: 910px) {
+  /* @media (max-width: 910px) {
     form {
       margin-top: 13%;
     }
@@ -67,4 +69,10 @@ export const StyledMain = styled.main`
       margin-top: 25%;
     }
   }
+
+  @media (max-height: 480px) {
+    form {
+      margin-top: 25%;
+    }
+  } */
 `;
