@@ -58,7 +58,7 @@ const UserProvider = ({ children }: IUserProviderProps) => {
       });
 
       toast.success("Login efetuado com sucesso");
-      setUser(response.data.user);
+      setUser(response.data);
       navigate("/dashboard");
     } catch (error) {
       console.error(error);

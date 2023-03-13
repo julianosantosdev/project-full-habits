@@ -4,7 +4,7 @@ import * as yup from "yup";
 import { StyledMain } from "./style";
 import { Link } from "react-router-dom";
 import { Input } from "../../components/Input";
-import { StyledButton } from "../../styles/buttonStyles";
+import { StyledButton } from "../../styles/ButtonStyles";
 import { UserContext } from "../../contexts/UserContext";
 import { useContext } from "react";
 import { Header } from "../../components/Header";
