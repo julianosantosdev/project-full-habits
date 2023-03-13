@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import { Card } from "../../components/CardChart";
+import { chartData } from "../../components/Charts/data";
+import { DoughnutChart } from "../../components/Charts/Doughnut";
 import { ModalTemplate } from "../../components/Modal/Template";
 import { ModalContext } from "../../contexts/ModalContext";
 
