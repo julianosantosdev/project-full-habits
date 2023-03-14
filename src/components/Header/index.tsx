@@ -26,14 +26,14 @@ const Header = ({ showButtons }: IHeaderInterface) => {
       <div className="logo">
         <img src={logo} alt="logo" />
       </div>
-      <div>
+      <div className="button-container">
         {showButtons && (
           <button
             onClick={() => {
               handleLogOut();
             }}
           >
-            LogOut
+            Logout
           </button>
         )}
       </div>
