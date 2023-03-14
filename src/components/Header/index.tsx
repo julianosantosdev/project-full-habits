@@ -33,7 +33,7 @@ const Header = ({ showButtons }: IHeaderInterface) => {
               handleLogOut();
             }}
           >
-            LogOut
+            Logout
           </button>
         )}
       </div>

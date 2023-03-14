@@ -8,7 +8,6 @@ export const HeaderStyled = styled.header`
   position: fixed;
   top: 0;
   z-index: 1;
-  border: 1px solid red;
 
   // display
   display: flex;
@@ -25,7 +24,6 @@ export const HeaderStyled = styled.header`
     flex-direction: row;
     margin-left: 15px;
     margin-right: 15px;
-    border: 1px solid black;
     height: 60px;
   }
 
@@ -47,7 +45,7 @@ export const HeaderStyled = styled.header`
     font-weight: bold;
     font-size: large;
     cursor: pointer;
-    border: 1px solid yellow;
+    margin-bottom: 10px;
   }
 
   span {
