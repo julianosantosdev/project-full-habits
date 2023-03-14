@@ -2,10 +2,17 @@ import { Chart } from "chart.js";
 import { Bar } from "react-chartjs-2";
 Chart.defaults.font.family = "Nunito";
 
-interface iDataChart {
+interface iBarChart {
   chartData: {
-    date: string;
-    hour: number;
+    labels: string[];
+    datasets: {
+      label: string;
+      data: number[];
+      backgroundColor: string[];
+      borderWidth: number;
+      borderRadius: number;
+      borderSkipped: boolean;
+    }[];
   };
 }
 
@@ -42,11 +49,8 @@ const options = {
   },
 };
 
-const BarChart = ({ chartData }) => {
-  return (
-    // <ChartContainer>
-    <Bar data={chartData} options={options} />
-    // </ChartContainer>
-  );
+const BarChart = ({ chartData }: iBarChart) => {
+  return <Bar data={chartData} options={options} />;
 };
 export { BarChart };
+
