@@ -1,4 +1,4 @@
-import { Chart } from "chart.js";
+import { Chart } from "chart.js/auto";
 import { Bar } from "react-chartjs-2";
 Chart.defaults.font.family = "Nunito";
 
@@ -53,4 +53,3 @@ const BarChart = ({ chartData }: iBarChart) => {
   return <Bar data={chartData} options={options} />;
 };
 export { BarChart };
-

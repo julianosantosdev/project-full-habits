@@ -1,4 +1,4 @@
-import { Chart } from "chart.js";
+import { Chart } from "chart.js/auto";
 import { Doughnut } from "react-chartjs-2";
 Chart.defaults.font.family = "Nunito";
 
@@ -54,4 +54,3 @@ const options = {
 export const DoughnutChart = ({ chartData }: iDoughnutChart) => {
   return <Doughnut data={chartData} options={options} />;
 };
-
