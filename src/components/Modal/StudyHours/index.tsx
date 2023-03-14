@@ -31,7 +31,6 @@ const StudyHours = () => {
       hours: parseFloat(hours),
       userId: userId,
     };
-    console.log(formDataToSubmit);
 
     try {
       const response = await api.post(`/studyTimes`, formDataToSubmit, {
@@ -40,7 +39,6 @@ const StudyHours = () => {
         },
       });
       toast.success("Hábito registrado!");
-      console.log(response.data);
       setStudy([...study, response.data]);
       setShowModal(null);
     } catch (error) {
@@ -80,4 +78,3 @@ const StudyHours = () => {
 };
 
 export { StudyHours };
-

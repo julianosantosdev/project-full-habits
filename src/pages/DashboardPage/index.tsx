@@ -9,21 +9,16 @@ import { ModalContext } from "../../contexts/ModalContext";
 import { ModalTemplate } from "../../components/Modal/Template";
 
 const DashboardPage = () => {
-  const { user } = useContext(UserContext);
+  const { autoLoginUser, sleep, training, study, user } =
+    useContext(UserContext);
+
   const userName = user?.name;
-  const { autoLoginUser, sleep, training, study } = useContext(UserContext);
 
   useEffect(() => {
-    if (user === null) {
+    if (user == null) {
       autoLoginUser();
     }
   }, []);
-
-  console.log(user)
-
-  useEffect(() => {
-
-  })
 
   const { showModal } = useContext(ModalContext);
 
@@ -32,8 +27,8 @@ const DashboardPage = () => {
       {showModal && <ModalTemplate modalType={showModal} />}
       <Header showButtons="show" />
       <DashboardContainer>
-        <h1>Meu Resumo</h1>
-        <h4>Olá, {userName}</h4>
+        <h1 className="heading-3">Meu Resumo</h1>
+        <h4 className="heading-4">Olá, {userName}</h4>
         <div className="habbitsResume__content">
           <SleepHabbits />
           <ExercisesHabbits />
@@ -45,4 +40,3 @@ const DashboardPage = () => {
 };
 
 export { DashboardPage };
-

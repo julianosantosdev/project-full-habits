@@ -11,11 +11,12 @@ export const StyledMain = styled.main`
   min-height: 100vh;
 
   form {
+    margin: 30px;
     background-color: var(--color-gray);
     position: absolute;
     top: 12vh;
     border-radius: var(--border-default);
-    width: 100%;
+    width: 90%;
     max-width: 750px;
     display: flex;
     flex-direction: column;

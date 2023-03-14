@@ -12,6 +12,7 @@ export const modalFormSchema = yup
     hours: yup
       .number()
       .required("Quantidade de horas é obrigatória")
+      .typeError("Quantidade de horas deve ser um número")
       .test(
         "Is positive?",
         "Valor deve ser entre 0 e 24",
@@ -19,4 +20,3 @@ export const modalFormSchema = yup
       ),
   })
   .required();
-
