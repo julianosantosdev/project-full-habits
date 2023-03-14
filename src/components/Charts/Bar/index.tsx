@@ -1,14 +1,13 @@
 import { Chart } from "chart.js";
 import { Bar } from "react-chartjs-2";
-import { ChartContainer } from "./styles";
 Chart.defaults.font.family = "Nunito";
 
-// interface iDataChart {
-//   chartData: {
-//     date: string;
-//     hour: number;
-//   };
-// }
+interface iDataChart {
+  chartData: {
+    date: string;
+    hour: number;
+  };
+}
 
 const options = {
   responsive: true,
