@@ -14,10 +14,16 @@ const DashboardPage = () => {
   const { autoLoginUser, sleep, training, study } = useContext(UserContext);
 
   useEffect(() => {
-    if (sleep.length === 0 || training.length === 0 || study.length === 0) {
+    if (user === null) {
       autoLoginUser();
     }
-  }, [sleep, training, study]);
+  }, []);
+
+  console.log(user)
+
+  useEffect(() => {
+
+  })
 
   const { showModal } = useContext(ModalContext);
 
