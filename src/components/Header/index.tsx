@@ -19,7 +19,7 @@ const Header = ({ showButtons }: IHeaderInterface) => {
       <nav>
         {showButtons && (
           <span>
-            <img src={hamburguer} />
+            <p>ninja</p>
           </span>
         )}
       </nav>
