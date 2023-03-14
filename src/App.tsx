@@ -1,16 +1,20 @@
-import { useState } from "react";
-import "./App.css";
-import { GlobalStyles } from "./styles/global";
+import { GlobalStyles } from "./styles/GlobalStyles";
 import { Router } from "./Router";
-import { Toastfy } from "./toastfy";
+import { Toastfy } from "./Toastfy";
+import { GlobalColorAndTypography } from "./styles/GlobalColorAndTypography";
+import { UserProvider } from "./contexts/UserContext";
+import { ModalProvider } from "./contexts/ModalContext";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <GlobalStyles />
-      <Router />
+      <GlobalColorAndTypography />
+      <UserProvider>
+        <ModalProvider>
+          <Router />
+        </ModalProvider>
+      </UserProvider>
       <Toastfy />
     </>
   );

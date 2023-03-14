@@ -8,6 +8,9 @@ export const GlobalStyles = createGlobalStyle`
     border: none;
     list-style: none;
     text-decoration: none;
+    
+    font-family: 'Nunito', sans-serif;
+    line-height: 150%;
   }
 
   button{
