@@ -1,5 +1,4 @@
 import { BarChart } from "../../../../components/Charts/Bar";
-import { chartData } from "../../../../components/Charts/data";
 import {} from "chart.js/auto";
 import { useContext, useState } from "react";
 import { UserContext } from "../../../../contexts/UserContext";
@@ -81,4 +80,3 @@ const StudyHabbits = () => {
 };
 
 export { StudyHabbits };
-
