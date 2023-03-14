@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const HeaderStyled = styled.header`
   width: 100vw;
-  height: 5vw;
-  min-height: 55px;
+  height: 13vh;
+  max-height: 115px;
   background-color: #6856f9;
   position: fixed;
   top: 0;
@@ -12,7 +12,7 @@ export const HeaderStyled = styled.header`
   // display
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 
   // font
   color: white;
@@ -34,7 +34,7 @@ export const HeaderStyled = styled.header`
 
   img {
     width: 75%;
-    min-width: 210px;
+    min-width: 190px;
   }
 
   button {
@@ -50,9 +50,15 @@ export const HeaderStyled = styled.header`
     visibility: hidden;
   }
 
-  @media (max-height: 330px) {
-    img {
-      width: 50%;
-    }
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 1120px) {
+    height: 11vh;
+  }
+
+  @media (max-width: 1120px) {
+    height: 11vh;
   }
 `;
