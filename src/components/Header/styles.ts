@@ -2,12 +2,13 @@ import styled from "styled-components";
 
 export const HeaderStyled = styled.header`
   width: 100vw;
-  height: 13vh;
-  max-height: 115px;
+  min-height: 100px;
+  max-height: 100px;
   background-color: #6856f9;
   position: fixed;
   top: 0;
   z-index: 1;
+  border: 1px solid red;
 
   // display
   display: flex;
@@ -18,12 +19,14 @@ export const HeaderStyled = styled.header`
   color: white;
   font-weight: bold;
 
-  div {
+  .logo {
     display: flex;
     justify-content: center;
     flex-direction: row;
     margin-left: 15px;
     margin-right: 15px;
+    border: 1px solid black;
+    height: 60px;
   }
 
   nav {
@@ -44,6 +47,7 @@ export const HeaderStyled = styled.header`
     font-weight: bold;
     font-size: large;
     cursor: pointer;
+    border: 1px solid yellow;
   }
 
   span {
