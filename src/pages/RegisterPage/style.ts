@@ -16,7 +16,7 @@ export const StyledMain = styled.main`
     top: 15vh;
     background-color: var(--color-gray);
     border-radius: var(--border-default);
-    width: 100%;
+    width: 90%;
     max-width: 750px;
 
     display: flex;
@@ -36,11 +36,6 @@ export const StyledMain = styled.main`
       p {
         color: #e02d2d;
       }
-    }
-
-    button {
-      /* padding: 5px 20px 0 40px; */
-      /* gap: 15px; */
     }
 
     .link-login {
